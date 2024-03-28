@@ -1,10 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './style.css'
+import './theme/index.scss'
 
 // 引入 pinia 状态管理器
 import { createPinia } from 'pinia'
 const pinia = createPinia()
+
+// 引入 路由
+import router from '@/router'
 
 // 引入 elementplus  ui框架
 import Elementplus from 'element-plus'
@@ -16,4 +19,4 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 
 
-createApp(App).use(pinia).use(Elementplus).mount('#app')
+createApp(App).use(pinia).use(Elementplus).use(router).mount('#app')

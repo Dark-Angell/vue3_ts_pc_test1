@@ -13,6 +13,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "paths": {
+      "@/*":[
+        "src/*", // 如果有红色波浪线提示 则配置为 "./src/*"
+      ]
+    },
 
     /* Linting */
     "strict": true,
